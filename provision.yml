@@ -1,0 +1,8 @@
+---
+- hosts: app
+  sudo: true
+
+  roles:  
+    - avahi
+
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" standalone="no"?><!--*-nxml-*-->
+<!DOCTYPE service-group SYSTEM "avahi-service.dtd">
+<service-group>
+	<name replace-wildcards="yes">{{ avahi_banner }}</name>
+	<service>
+    	<domain-name>local</domain-name>
+    	<host-name>searchforstoke.local</host-name>
+		<type>_http._tcp</type>
+		<port>80</port>
+	</service>
+</service-group>
