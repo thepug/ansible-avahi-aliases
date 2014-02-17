@@ -2,6 +2,9 @@
 - hosts: app
   sudo: true
 
+  vars:
+    avahi_aliases:
+      - avahitest
   roles:  
     - avahi
 

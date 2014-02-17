@@ -15,7 +15,7 @@
   pip: name=git+git://github.com/thepug/avahi-aliases.git
 
 - name: Copy aliases file
-  copy: src=default.aliases dest=/etc/avahi/aliases.d/default
+  template: src=default.aliases.j2 dest=/etc/avahi/aliases.d/default
 #- name: Install avahi crontab
 #  copy: src=avahi.cron dest=/etc/cron.d/avahi owner=root mode=0644
 
