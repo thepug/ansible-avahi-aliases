@@ -1,0 +1,15 @@
+# Avahi Aliases - Management of local hostnames
+#
+
+description     "avahi subdomain announcer"
+version "0.0.10"
+author "Zenobius Jiricek <airtonix@gmail.com>"
+
+start on runlevel [2345] stop on runlevel [!2345]
+
+respawn
+exec /usr/local/bin/avahi-alias start
+
+post-stop script
+        exec /usr/local/bin/avahi-alias stop
+end script
